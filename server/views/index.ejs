@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="stylesheets/index.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
+  <script type="text/javascript" src="javascripts/front_end.js"></script>
+  <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+
+</head>
+<body>
+
+
+<div class = "main">
+  <fieldset align="center">
+        <div id="legend">
+          <legend class="">Register</legend>
+        </div>
+        <div class="control-group">
+          <!-- user name -->
+          <label class="control-label"  for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username here" class="input-xlarge" >
+        </div>
+
+        <div class="control-group">
+          <!-- Password-->
+          <label class="control-label" for="password">Password</label>
+          <input type="password" required id="password" name="password" placeholder="type in your password"  class="input-xlarge" onkeyup="return passwordChanged()">
+            <p id="strength"> </p>
+        </div>
+
+        <div class="control-group">
+          <aside>
+            <progress id="password-strength-meter"max="100" value="0">
+              <span id="percent">30%</span>
+            </progress>
+            <p id="password-strength-text"></p>
+          </aside>
+        </div>
+
+        <div class="control-group">
+          <!-- Password -->
+          <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+          <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge" required >
+        </div>
+
+        <div class="control-group">
+          <!-- E-mail -->
+          <label class="control-label" for="email">E-mail Address</label>
+          <input type="email" id="email" name="email" placeholder="" class="input-xlarge" required >
+        </div>
+
+      <div class="control-group">
+          <!-- E-mail -->
+          <label class="control-label" for="verify_email">Verify E-mail Address</label>
+          <input type="email" id="email" name="verify_email" placeholder="" class="input-xlarge" required>
+      </div>
+
+        <div class="control-group">
+          <label class="control-label"  for="security_question_1">Security Question 1</label>
+          <input list="security_questions_dl" id="security_question_1" required>
+          <datalist id="security_questions_dl" >
+            <option value="Mother's maiden name?">
+            <option value="First pet?">
+            <option value="City of birth?">
+            <option value="Childhood super hero? ">
+            <option value="First car? ">
+          </datalist>
+          <br><br>Answer:
+          <input id="answer_1" type="text" placeholder="enter ur answer here">
+        </div>
+
+        <div class="control-group">
+          <label class="control-label"  for="security_question_2">Security Question 2</label>
+          <input list="security_questions_dl_2" id="security_question_2" required>
+          <datalist id="security_questions_dl_2" >
+            <option value="Mother's maiden name?">
+            <option value="First pet?">
+            <option value="City of birth?">
+            <option value="Childhood super hero? ">
+            <option value="First car? ">
+          </datalist>
+          <br><br>Answer:
+          <input id="answer_2" type="text" placeholder="enter ur answer here">
+        </div>
+
+      <div class="control-group">
+          <!-- Phone -->
+          <label class="control-label"  for="phone">Mobile</label>
+          <div class="controls">
+              <input type="text" id="phone" name="phone" class="input-xlarge" required>
+          </div>
+      </div>
+
+      <br><br><br>
+        <div class="control-group" align="center">
+          <form>
+            <div class="box" id ="target" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="allowDrop(event)" >
+              Drop here
+            </div>
+
+            <div id="src" align="center">
+              <img id="sjsu" src="https://www.totalwaterpolo.com/wp-content/uploads/2013/12/SJSUlogo.gif" draggable="true" ondragstart="drag(event)" ondragend="src_dragend(event)" width="75" height="75">
+              <img id="cisco" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" draggable="true" ondragstart="drag(event)" ondragend="src_dragend(event)" width="75" height="75">
+              <img id="msft" src="http://cdn2.insidermonkey.com/blog/wp-content/uploads/2014/12/MicrosoftMSFT_TechSupportScam.png" draggable="true" ondragstart="drag(event)" ondragend="src_dragend(event)"  width="75" height="75">
+            </div>
+          </form>
+
+        </div>
+
+        <div class="control-group">
+          <br><br><br>
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn btn-success" onclick="submitStuff()">Create</button>
+          </div>
+        </div>
+      </fieldset>
+
+</div>
+</div>
+</body>
+
+
+</html>
